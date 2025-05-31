@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact - Echipa 4</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/uikit.css" />
+    <style>
+      body {
+        font-family: "Open Sans", sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Montserrat", sans-serif;
+      }
+      .uk-section-muted {
+        min-height: 100vh; /* să acopere tot ecranul */
+      }
+      h1 {
+        text-align: center;
+        padding-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      class="uk-navbar-container uk-navbar-transparent uk-position-fixed uk-position-top uk-width-1-1"
+      uk-navbar
+      uk-sticky
+    >
+      <div class="uk-container">
+        <div class="uk-navbar-right uk-visible@s">
+          <ul class="uk-navbar-nav">
+            <li><a href="index.html">Acasă</a></li>
+            <li><a href="pagina2.html">CV</a></li>
+            <li><a href="pagina3.html">Portofoliu</a></li>
+            <li class="uk-active"><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="uk-navbar-right uk-hidden@s">
+          <a
+            class="uk-navbar-toggle"
+            uk-navbar-toggle-icon
+            href="#offcanvas-nav"
+            uk-toggle
+          ></a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="offcanvas-nav" uk-offcanvas="overlay: true">
+      <div class="uk-offcanvas-bar">
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+        <ul class="uk-nav uk-nav-default">
+          <li><a href="index.html">Acasă</a></li>
+          <li><a href="pagina2.html">CV</a></li>
+          <li><a href="pagina3.html">Portofoliu</a></li>
+          <li class="uk-active"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="uk-section uk-section-muted">
+      <div class="uk-container uk-width-1-2@m">
+        <h1 class="uk-heading-line"><span>Formular de Contact</span></h1>
+
+        <form
+          class="uk-form-stacked"
+          action="afisare.php"
+          method="POST"
+          uk-form
+        >
+          <div class="uk-margin">
+            <label class="uk-form-label" for="nume">Nume complet</label>
+            <div class="uk-form-controls">
+              <input
+                class="uk-input"
+                id="nume"
+                name="nume"
+                type="text"
+                placeholder="Numele dumneavoastră"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="uk-margin">
+            <label class="uk-form-label" for="email">Email</label>
+            <div class="uk-form-controls">
+              <input
+                class="uk-input"
+                id="email"
+                name="email"
+                type="email"
+                placeholder="adresa@email.com"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="uk-margin">
+            <label class="uk-form-label" for="subiect">Subiect</label>
+            <div class="uk-form-controls">
+              <input
+                class="uk-input"
+                id="subiect"
+                name="subiect"
+                type="text"
+                placeholder="Subiectul mesajului"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="uk-margin">
+            <label class="uk-form-label" for="mesaj">Mesaj</label>
+            <div class="uk-form-controls">
+              <textarea
+                class="uk-textarea"
+                id="mesaj"
+                name="mesaj"
+                rows="5"
+                placeholder="Scrie mesajul aici..."
+                required
+              ></textarea>
+            </div>
+          </div>
+
+          <button class="uk-button uk-button-primary" type="submit">
+            Trimite
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <a href="#" uk-totop uk-scroll></a>
+
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+  </body>
+</html>
